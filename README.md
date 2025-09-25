@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# Lumen - Your Partner for Illuminating Digital Solutions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+Lumen is a modern, responsive single-page application (SPA) built with React and styled using Tailwind CSS. It serves as a professional portfolio website for a digital solutions company based in Galle, Sri Lanka, showcasing services, team, testimonials, and contact information.
 
-In the project directory, you can run:
+The website is designed for a seamless user experience across all devices, featuring smooth scrolling, animations powered by Framer Motion, and a clean, dark-themed aesthetic.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Responsive Design:** Optimized for desktop, tablet, and mobile viewing using Tailwind CSS.
+* **Smooth Navigation:** Scroll-to-section navigation for a fluid user experience.
+* **Dynamic Content:** Data-driven sections (Services, Team, Testimonials, Social Links) managed from `src/data/siteData.js` for easy updates.
+* **Animations:** Engaging scroll-triggered and element animations powered by Framer Motion.
+* **Modular Components:** Well-structured React components for easy development and maintenance.
+* **Hero Section:** Engaging introduction with a gradient text highlight.
+* **Services Section:** Visually appealing display of offerings with custom SVG icons.
+* **About Section:** Company vision and mission with a relevant background image.
+* **Team Section:** Profiles of core team members with hover effects.
+* **Testimonials Carousel:** Automated and navigable client feedback section.
+* **Contact Form:** Simple form for inquiries.
+* **Footer:** Essential company information and social media links.
+* **Company Logo:** Integrated graphical logo for consistent branding across the header.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+* **React.js:** Frontend library for building user interfaces.
+* **Create React App:** Development environment setup.
+* **Tailwind CSS:** A utility-first CSS framework for rapid styling.
+* **Framer Motion:** A production-ready motion library for React.
+* **gh-pages:** For easy deployment to GitHub Pages.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Structure
 
-### `npm run build`
+```
+lumen-digital/
+├── public/                 # Static assets (images, index.html)
+│   └── images/             # Static images for sections (e.g., team-vision.jpg, lumen-logo.png)
+├── src/                    # All React source code
+│   ├── components/         # Reusable UI components for each section
+│   │   ├── Header.jsx
+│   │   ├── HeroSection.jsx
+│   │   ├── ServicesSection.jsx
+│   │   ├── AboutSection.jsx
+│   │   ├── TeamSection.jsx
+│   │   ├── TestimonialsSection.jsx
+│   │   ├── ContactSection.jsx
+│   │   └── Footer.jsx
+│   ├── data/
+│   │   └── siteData.js     # Centralized content data (site title, nav links, services, team, testimonials, social links & icons)
+│   ├── App.js              # Main application component
+│   ├── index.css           # Global Tailwind CSS imports and custom styles
+│   └── index.js            # React entry point
+├── .gitignore              # Specifies intentionally untracked files
+├── package.json            # Project dependencies and scripts
+├── postcss.config.js       # PostCSS configuration for Tailwind CSS
+├── README.md               # This file
+└── tailwind.config.js      # Tailwind CSS configuration
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Make sure you have Node.js and npm (or yarn) installed on your machine.
 
-### `npm run eject`
+* [Node.js](https://nodejs.org/en/) (comes with npm)
+* [yarn](https://classic.yarnpkg.com/en/docs/install/) (optional)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.  **Clone the repository:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    git clone [https://github.com/Pathum456/lumen.git](https://github.com/Pathum456/lumen.git)
+    cd lumen-digital
+    ```
+    *(Replace `Pathum456` and `lumen`)*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2.  **Install dependencies:**
 
-## Learn More
+    ```bash
+    npm install
+    # OR
+    yarn install
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3.  **Start the development server:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    npm start
+    # OR
+    yarn start
+    ```
+    This will open the application in your browser at `http://localhost:3000`.
 
-### Code Splitting
+## Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1.  **Content:** All textual content, service details, team member information, testimonials, and social links (including their SVG icons) are managed in `src/data/siteData.js`. This file also includes `siteTitle` for consistent brand naming. Simply edit this file to update the website's content.
+2.  **Images:**
+    * For the main company logo (`lumen-logo.png`), `team-vision.jpg` in `AboutSection.jsx`, and team member profile images (`kaleesha.png`, `nethmina.png`, etc.) in `siteData.js`, place your image files in the `public/images/` folder.
+    <!-- * Reference these images in your code using `/images/your-image-name.jpg`. -->
+3.  **Styling:** Modify `tailwind.config.js` to extend Tailwind's default theme (colors, fonts, etc.) or add utility classes directly in your JSX components. Global styles are in `src/index.css`.
 
-### Analyzing the Bundle Size
+## Deployment to GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is set up for easy deployment to GitHub Pages using the `gh-pages` package.
 
-### Making a Progressive Web App
+1.  **Ensure `homepage` is set in `package.json`**:
+    Open `package.json` and verify the `homepage` field matches your GitHub Pages URL:
+    ```json
+    "homepage": "https://pathum456.github.io/lumen/",
+    ```
+    *(Replace placeholders with your actual GitHub username and repository name.)*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2.  **Run the deploy script:**
 
-### Advanced Configuration
+    ```bash
+    npm run deploy
+    # OR
+    yarn deploy
+    ```
+    This command will build your React app and push the `build` directory to a `gh-pages` branch on your GitHub repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3.  **Enable GitHub Pages in Repository Settings:**
+    * Go to your GitHub repository on GitHub.com.
+    * Navigate to **Settings > Pages**.
+    * Under "Build and deployment", select **`Deploy from a branch`**.
+    * For "Branch", choose **`gh-pages`** and select the `/(root)` folder.
+    * Click `Save`.
 
-### Deployment
+Your site should be live at the `homepage` URL after a few minutes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+Feel free to fork the repository, make improvements, and submit pull requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+[MIT License](LICENSE)
+
+---
+Made with ❤️ by Lumen Team
