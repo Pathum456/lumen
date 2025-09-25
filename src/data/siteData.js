@@ -1,7 +1,19 @@
-// Centralized data for easy management.
-// Replace placeholders with your actual content.
+import React from 'react';
 import kaleeshaImg from '../assets/images/team/kaleesha.png';
 import himethImg from '../assets/images/team/himeth.png';
+import {
+  SiJavascript,
+  SiReact,
+  SiNodedotjs,
+  SiPython,
+  SiTailwindcss,
+  SiFigma,
+  SiMongodb,
+  SiPostgresql,
+  SiDocker,
+  SiGit,
+  SiSwift
+} from "react-icons/si";
 export const navLinks = [
     { title: 'Services', href: '#services' },
     { title: 'About', href: '#about' },
@@ -59,4 +71,59 @@ export const SocialIcons = {
             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
         </svg>
     ),
+};
+
+export const technologies = [
+    { name: 'JavaScript', icon: 'Javascript' },
+    { name: 'React', icon: 'React' },
+    { name: 'Node.js', icon: 'Node' },
+    { name: 'Python', icon: 'Python' },
+    { name: 'Tailwind CSS', icon: 'Tailwind' },
+    { name: 'Figma', icon: 'Figma' },
+    { name: 'MongoDB', icon: 'Mongo' },
+    { name: 'PostgreSQL', icon: 'Postgres' },
+    { name: 'Docker', icon: 'Docker' },
+    { name: 'Git', icon: 'Git' },
+    { name: 'React Native', icon: 'ReactNative' },
+    { name: 'Swift', icon: 'Swift' },
+];
+
+export const TechIcons = {
+  Javascript: ({ className = "h-6 w-6", title = "JavaScript", ...props }) => (
+    <SiJavascript className={className} title={title} {...props} />
+  ),
+  React: ({ className = "h-6 w-6", title = "React", ...props }) => (
+    <SiReact className={className} title={title} {...props} />
+  ),
+  Node: ({ className = "h-6 w-6", title = "Node.js", ...props }) => (
+    <SiNodedotjs className={className} title={title} {...props} />
+  ),
+  Python: ({ className = "h-6 w-6", title = "Python", ...props }) => (
+    <SiPython className={className} title={title} {...props} />
+  ),
+  Tailwind: ({ className = "h-6 w-6", title = "Tailwind CSS", ...props }) => (
+    <SiTailwindcss className={className} title={title} {...props} />
+  ),
+  Figma: ({ className = "h-6 w-6", title = "Figma", ...props }) => (
+    <SiFigma className={className} title={title} {...props} />
+  ),
+  Mongo: ({ className = "h-6 w-6", title = "MongoDB", ...props }) => (
+    <SiMongodb className={className} title={title} {...props} />
+  ),
+  Postgres: ({ className = "h-6 w-6", title = "PostgreSQL", ...props }) => (
+    <SiPostgresql className={className} title={title} {...props} />
+  ),
+  Docker: ({ className = "h-6 w-6", title = "Docker", ...props }) => (
+    <SiDocker className={className} title={title} {...props} />
+  ),
+  Git: ({ className = "h-6 w-6", title = "Git", ...props }) => (
+    <SiGit className={className} title={title} {...props} />
+  ),
+  ReactNative: ({ className = "h-6 w-6", title = "React Native", ...props }) => (
+    // Simple Icons doesn't always have a separate React Native mark; fallback to React.
+    <SiReact className={className} title={title} {...props} />
+  ),
+  Swift: ({ className = "h-6 w-6", title = "Swift", ...props }) => (
+    <SiSwift className={className} title={title} {...props} />
+  ),
 };
